@@ -1,6 +1,6 @@
 # El Faro
 
-Proyecto académico correspondiente a la **Actividad Sumativa 1: Sitio en HTML5**. Consiste en el desarrollo de un sitio web para el periódico digital **El Faro**, con secciones de Inicio, Deporte y Negocios, incorporando noticias, "video y audio" (simulaciones).
+Proyecto académico correspondiente a la **Actividad Sumativa 1: Sitio en HTML5**. Consiste en el desarrollo de un sitio web para el periódico digital **El Faro**, con secciones de Inicio, Deporte y Negocios, incorporando noticias, "video y audio" (simulaciones), ademas del wireframe en excalidraw.
 
 ## Estructura del proyecto
 
