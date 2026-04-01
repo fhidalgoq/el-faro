@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Faro | Inicio</title>
+    <meta name="description" content="Portada del periódico digital El Faro.">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+
+    <header class="site-header">
+        <div class="container topbar">
+            <div class="brand">
+                <img src="https://thumbs.dreamstime.com/z/logotipo-de-faro-formado-por-un-dise%C3%B1o-sencillo-y-moderno-estilo-minimalista-elegante-el-llamativo-capta-la-esencia-fuerza-gu%C3%ADa-280336023.jpg"
+                    alt="Logotipo de El Faro" class="logo" width="80" height="80">
+                <div>
+                    <p class="eyebrow">Periódico digital</p>
+                    <h1>El Faro</h1>
+                    <p class="tagline">Actualidad, deporte y negocios en un solo lugar.</p>
+                </div>
+            </div>
+            <div class="header-info">
+                <p>Edición digital</p>
+                <p>Santiago de Chile</p>
+            </div>
+        </div>
+
+        <nav class="main-nav" aria-label="Menú principal">
+            <div class="container">
+                <ul>
+                    <li><a href="index.html" class="active">Inicio</a></li>
+                    <li><a href="deporte.html">Deporte</a></li>
+                    <li><a href="negocios.html">Negocios</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main id="contenido" class="container">
+        <section class="hero-card">
+            <div>
+                <p class="section-label">Portada</p>
+                <h2>Bienvenidos al sitio informativo de El Faro</h2>
+                <p>
+                    Este portal presenta noticias generales, deportivas y de negocios,
+                    organizado mediante HTML5, navegación estructurada y recursos multimedia.
+                </p>
+            </div>
+            <img src="assets/img/portada-video.svg" alt="Portada visual del sitio El Faro" class="hero-image"
+                width="640" height="360">
+        </section>
+
+        <section class="content-section">
+            <h2>Noticias generales</h2>
+            <p>
+                A continuación se presentan tres noticias generales organizadas en una tabla,
+                cada una con título, categoría y texto del artículo.
+            </p>
+
+            <table class="news-table">
+                <caption>Tabla de noticias generales</caption>
+                <thead>
+                    <tr>
+                        <th>Título</th>
+                        <th>Categoría</th>
+                        <th>Texto del artículo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Municipio impulsa recuperación de espacios públicos</td>
+                        <td><span class="badge">Ciudad</span></td>
+                        <td>
+                            Autoridades comunales anunciaron un plan de mejoramiento urbano que contempla
+                            iluminación, áreas verdes y renovación de plazas para fortalecer la seguridad
+                            y la convivencia vecinal.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Feria científica escolar reúne proyectos de innovación</td>
+                        <td><span class="badge">Educación</span></td>
+                        <td>
+                            Estudiantes de distintos establecimientos presentaron iniciativas sobre reciclaje,
+                            robótica y energías limpias, promoviendo el aprendizaje práctico y el trabajo colaborativo.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Campaña de invierno refuerza apoyo a personas mayores</td>
+                        <td><span class="badge">Sociedad</span></td>
+                        <td>
+                            Centros de salud y organizaciones comunitarias coordinaron operativos preventivos,
+                            vacunación y orientación médica para adultos mayores durante la temporada invernal.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="media-section">
+            <article class="media-card">
+                <h2>Video informativo</h2>
+                <p>
+                    Recurso multimedia incorporado con la etiqueta HTML5 <code>&lt;video&gt;</code>.
+                </p>
+                <video controls poster="assets/img/portada-video.svg">
+                    <source src="assets/media/video-noticia.mp4" type="video/mp4">
+                    Tu navegador no soporta la reproducción de video.
+                </video>
+            </article>
+
+            <article class="media-card">
+                <h2>Audio del día</h2>
+                <p>
+                    Recurso multimedia incorporado con la etiqueta HTML5 <code>&lt;audio&gt;</code>.
+                </p>
+                <audio controls>
+                    <source src="assets/media/audio-resumen.mp3" type="audio/mpeg">
+                    Tu navegador no soporta la reproducción de audio.
+                </audio>
+            </article>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div>
+                <h3>El Faro</h3>
+                <p>Sitio web desarrollado con HTML5+CSS.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

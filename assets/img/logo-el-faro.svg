@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200" role="img" aria-label="Logo El Faro">
+  <defs>
+    <linearGradient id="gradiente" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#0d3b66"/>
+      <stop offset="100%" stop-color="#1d6fa5"/>
+    </linearGradient>
+  </defs>
+  <circle cx="100" cy="100" r="94" fill="#ffffff" stroke="url(#gradiente)" stroke-width="10"/>
+  <path d="M82 150V72h36v78" fill="none" stroke="#0d3b66" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M74 72h52l-26-28-26 28Z" fill="#f4a261" stroke="#0d3b66" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M92 150h16" stroke="#f4a261" stroke-width="8" stroke-linecap="round"/>
+  <path d="M128 58c16 10 25 25 28 45" fill="none" stroke="#1d6fa5" stroke-width="8" stroke-linecap="round"/>
+  <path d="M136 82c10 6 15 15 17 26" fill="none" stroke="#1d6fa5" stroke-width="6" stroke-linecap="round"/>
+</svg>
