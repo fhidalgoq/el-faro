@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>El Faro | Deporte</title>
-    <meta name="description" content="Sección de deportes del periódico digital El Faro. Cobertura de fútbol, atletismo e infraestructura deportiva.">
+    <title>El Faro | Tecnología</title>
+    <meta name="description" content="Sección de tecnología e innovación del periódico digital El Faro.">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="assets/css/custom.css">
 </head>
-
 <body>
     <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
 
@@ -18,7 +16,7 @@
     <div class="alert alert-warning alert-dismissible fade show mb-0 rounded-0 alert-bar" role="alert">
         <div class="container d-flex align-items-center gap-2">
             <i class="bi bi-lightning-charge-fill text-warning-emphasis"></i>
-            <span><strong>Última hora deportiva:</strong> Atleta nacional bate récord en campeonato metropolitano de medio fondo.</span>
+            <span><strong>Tech:</strong> Nueva ley de protección de datos personales entra en vigencia el próximo trimestre.</span>
         </div>
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
     </div>
@@ -32,17 +30,17 @@
                 <div>
                     <p class="eyebrow">Periódico digital</p>
                     <h1>El Faro</h1>
-                    <p class="tagline">Cobertura deportiva con información clara y actualizada.</p>
+                    <p class="tagline">Innovación, ciencia y mundo digital al día.</p>
                 </div>
             </div>
             <div class="text-end d-none d-md-block">
-                <p class="mb-0 small opacity-75"><i class="bi bi-trophy-fill me-1"></i>Sección Deporte</p>
+                <p class="mb-0 small opacity-75"><i class="bi bi-cpu me-1"></i>Sección Tecnología</p>
                 <p class="mb-0 small opacity-75"><i class="bi bi-geo-alt-fill me-1"></i>Santiago de Chile</p>
             </div>
         </div>
     </div>
 
-    <!-- RQ-03: Navbar con dropdown -->
+    <!-- Navbar -->
     <nav class="main-nav navbar navbar-expand-lg navbar-dark" aria-label="Menú principal">
         <div class="container">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain"
@@ -51,24 +49,16 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarMain">
                 <ul class="navbar-nav me-auto gap-1">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html"><i class="bi bi-house me-1"></i>Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="deporte.html">
-                            <i class="bi bi-trophy me-1"></i>Deporte
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="negocios.html"><i class="bi bi-graph-up me-1"></i>Negocios</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-house me-1"></i>Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="deporte.html"><i class="bi bi-trophy me-1"></i>Deporte</a></li>
+                    <li class="nav-item"><a class="nav-link" href="negocios.html"><i class="bi bi-graph-up me-1"></i>Negocios</a></li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="dropdownMas" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle active" aria-current="true" href="#" id="dropdownMas"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="bi bi-grid me-1"></i>Más secciones
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMas">
-                            <li><a class="dropdown-item" href="tecnologia.html"><i class="bi bi-cpu me-2 text-primary"></i>Tecnología</a></li>
+                            <li><a class="dropdown-item active" href="tecnologia.html"><i class="bi bi-cpu me-2 text-primary"></i>Tecnología</a></li>
                             <li><a class="dropdown-item" href="cultura.html"><i class="bi bi-palette me-2 text-danger"></i>Cultura</a></li>
                         </ul>
                     </li>
@@ -81,27 +71,21 @@
         </div>
     </nav>
 
-    <!-- Contenido principal -->
     <main id="contenido" class="py-4">
         <div class="container">
 
-            <!-- RQ-04: Noticia deportiva destacada -->
-            <section class="mb-5" aria-labelledby="sec-destacada-dep">
-                <h2 class="section-title" id="sec-destacada-dep">Noticia destacada</h2>
+            <!-- Noticia destacada (RQ-04) -->
+            <section class="mb-5" aria-labelledby="sec-destacada-tec">
+                <h2 class="section-title" id="sec-destacada-tec">Noticia destacada</h2>
                 <div class="row g-4">
                     <div class="col-lg-7">
                         <div class="card card-featured h-100">
-                            <img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=800&h=380&fit=crop"
-                                class="card-img-top" alt="Estadio deportivo" style="height:300px; object-fit:cover;">
+                            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=380&fit=crop"
+                                class="card-img-top" alt="Circuito tecnológico" style="height:300px; object-fit:cover;">
                             <div class="card-body p-4">
-                                <span class="cat-badge badge-sport d-inline-block mb-2">Atletismo</span>
-                                <h3 class="featured-title mt-2">
-                                    Atleta nacional obtiene récord en campeonato metropolitano de medio fondo
-                                </h3>
-                                <p class="text-muted">
-                                    La deportista consiguió una nueva marca personal en la prueba de medio fondo,
-                                    consolidándose como figura emergente del circuito local con proyección internacional.
-                                </p>
+                                <span class="cat-badge badge-tech d-inline-block mb-2">Inteligencia Artificial</span>
+                                <h3 class="featured-title mt-2">Chile lidera adopción de inteligencia artificial en pymes de Latinoamérica según nuevo informe</h3>
+                                <p class="text-muted">Un estudio regional revela que más del 40% de las pequeñas y medianas empresas chilenas ya integran herramientas de IA en sus procesos productivos, duplicando el promedio regional.</p>
                                 <div class="d-flex justify-content-between align-items-center mt-3">
                                     <small class="text-muted"><i class="bi bi-clock me-1"></i>Hace 1 hora</small>
                                     <a href="#" class="btn btn-faro btn-sm">Leer artículo <i class="bi bi-arrow-right ms-1"></i></a>
@@ -109,35 +93,30 @@
                             </div>
                         </div>
                     </div>
-
-                    <!-- Noticias secundarias -->
                     <div class="col-lg-5">
                         <div class="d-flex flex-column gap-3 h-100">
                             <div class="card card-side flex-row overflow-hidden">
-                                <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=120&h=110&fit=crop"
-                                    alt="Fútbol táctico">
+                                <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=120&h=110&fit=crop" alt="Programación">
                                 <div class="card-body p-3">
-                                    <span class="cat-badge badge-sport d-inline-block mb-1">Fútbol</span>
-                                    <h4 class="fs-6 fw-bold mb-1 mt-1">Selección local prueba nuevas variantes tácticas en entrenamientos</h4>
+                                    <span class="cat-badge badge-tech d-inline-block mb-1">Desarrollo</span>
+                                    <h4 class="fs-6 fw-bold mb-1 mt-1">Bootcamps de programación duplican matrícula en 2026</h4>
                                     <small class="text-muted"><i class="bi bi-clock me-1"></i>Hace 3 horas</small>
                                 </div>
                             </div>
                             <div class="card card-side flex-row overflow-hidden">
-                                <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=120&h=110&fit=crop"
-                                    alt="Centro de entrenamiento">
+                                <img src="https://images.unsplash.com/photo-1563770660941-20978e870e26?w=120&h=110&fit=crop" alt="Ciberseguridad">
                                 <div class="card-body p-3">
-                                    <span class="cat-badge badge-general d-inline-block mb-1">Infraestructura</span>
-                                    <h4 class="fs-6 fw-bold mb-1 mt-1">Club universitario inaugura moderno centro de entrenamiento</h4>
+                                    <span class="cat-badge badge-general d-inline-block mb-1">Ciberseguridad</span>
+                                    <h4 class="fs-6 fw-bold mb-1 mt-1">Gobierno refuerza protocolos de seguridad digital en servicios públicos</h4>
                                     <small class="text-muted"><i class="bi bi-clock me-1"></i>Hace 5 horas</small>
                                 </div>
                             </div>
                             <div class="card card-side flex-row overflow-hidden">
-                                <img src="https://images.unsplash.com/photo-1517649763962-0c623066013b?w=120&h=110&fit=crop"
-                                    alt="Ciclismo competencia">
+                                <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=120&h=110&fit=crop" alt="Big Data">
                                 <div class="card-body p-3">
-                                    <span class="cat-badge badge-society d-inline-block mb-1">Ciclismo</span>
-                                    <h4 class="fs-6 fw-bold mb-1 mt-1">Competencia regional de ciclismo convoca a más de 400 participantes</h4>
-                                    <small class="text-muted"><i class="bi bi-clock me-1"></i>Hace 9 horas</small>
+                                    <span class="cat-badge badge-society d-inline-block mb-1">Big Data</span>
+                                    <h4 class="fs-6 fw-bold mb-1 mt-1">Nuevas plataformas de datos transforman la toma de decisiones empresariales</h4>
+                                    <small class="text-muted"><i class="bi bi-clock me-1"></i>Hace 7 horas</small>
                                 </div>
                             </div>
                         </div>
@@ -145,82 +124,78 @@
                 </div>
             </section>
 
-            <!-- RQ-05: Más noticias deportivas (cards pequeñas) -->
-            <section class="mb-5" aria-labelledby="sec-mas-dep">
-                <h2 class="section-title" id="sec-mas-dep">Más noticias deportivas</h2>
+            <!-- Cards pequeñas (RQ-05) -->
+            <section class="mb-5" aria-labelledby="sec-mas-tec">
+                <h2 class="section-title" id="sec-mas-tec">Más noticias de tecnología</h2>
                 <div class="row g-3">
                     <div class="col-md-4">
                         <div class="card card-small h-100 position-relative">
-                            <img src="https://images.unsplash.com/photo-1560272564-c83b66b1ad12?w=400&h=180&fit=crop"
-                                class="card-img-top" alt="Fútbol" style="height:155px; object-fit:cover;">
+                            <img src="https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=400&h=180&fit=crop"
+                                class="card-img-top" alt="Hardware" style="height:155px; object-fit:cover;">
                             <div class="card-body">
-                                <span class="cat-badge badge-sport d-inline-block mb-2">Fútbol</span>
-                                <h5 class="card-title fw-bold">Torneo regional arranca con ocho equipos confirmados</h5>
-                                <p class="card-text small text-muted">La competencia promete altos niveles técnicos con equipos de distintas comunas participando.</p>
+                                <span class="cat-badge badge-tech d-inline-block mb-2">Hardware</span>
+                                <h5 class="card-title fw-bold">Nueva generación de procesadores con mayor eficiencia energética</h5>
+                                <p class="card-text small text-muted">Los fabricantes presentan chips con hasta un 35% de mejora en rendimiento por vatio consumido.</p>
                             </div>
                             <div class="card-footer small text-muted"><i class="bi bi-clock me-1"></i>Hace 4 horas</div>
-                            <a href="#" class="stretched-link" aria-label="Leer: Torneo regional"></a>
+                            <a href="#" class="stretched-link" aria-label="Leer: Procesadores"></a>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="card card-small h-100 position-relative">
-                            <img src="https://images.unsplash.com/photo-1519315901367-f34ff9154487?w=400&h=180&fit=crop"
-                                class="card-img-top" alt="Natación" style="height:155px; object-fit:cover;">
+                            <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&h=180&fit=crop"
+                                class="card-img-top" alt="Robótica" style="height:155px; object-fit:cover;">
                             <div class="card-body">
-                                <span class="cat-badge badge-society d-inline-block mb-2">Natación</span>
-                                <h5 class="card-title fw-bold">Jóvenes nadadores clasifican a campeonato nacional juvenil</h5>
-                                <p class="card-text small text-muted">Cuatro deportistas locales obtuvieron cupo en la competencia más importante de la categoría.</p>
+                                <span class="cat-badge badge-general d-inline-block mb-2">Robótica</span>
+                                <h5 class="card-title fw-bold">Universidad lanza laboratorio de robótica colaborativa abierto a estudiantes</h5>
+                                <p class="card-text small text-muted">El espacio estará disponible para proyectos de investigación y competencias nacionales.</p>
                             </div>
                             <div class="card-footer small text-muted"><i class="bi bi-clock me-1"></i>Hace 6 horas</div>
-                            <a href="#" class="stretched-link" aria-label="Leer: Natación juvenil"></a>
+                            <a href="#" class="stretched-link" aria-label="Leer: Laboratorio robótica"></a>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="card card-small h-100 position-relative">
-                            <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?w=400&h=180&fit=crop"
-                                class="card-img-top" alt="Básquetbol" style="height:155px; object-fit:cover;">
+                            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=180&fit=crop"
+                                class="card-img-top" alt="IoT" style="height:155px; object-fit:cover;">
                             <div class="card-body">
-                                <span class="cat-badge badge-tech d-inline-block mb-2">Básquetbol</span>
-                                <h5 class="card-title fw-bold">Liga comunal de básquetbol define a sus finalistas</h5>
-                                <p class="card-text small text-muted">Tras intensas semifinales, dos equipos disputarán el título del torneo esta semana.</p>
+                                <span class="cat-badge badge-society d-inline-block mb-2">IoT</span>
+                                <h5 class="card-title fw-bold">Sensores inteligentes optimizan el consumo de agua en comunas del norte</h5>
+                                <p class="card-text small text-muted">El proyecto piloto redujo el desperdicio hídrico en un 22% durante los primeros seis meses.</p>
                             </div>
-                            <div class="card-footer small text-muted"><i class="bi bi-clock me-1"></i>Hace 10 horas</div>
-                            <a href="#" class="stretched-link" aria-label="Leer: Liga básquetbol"></a>
+                            <div class="card-footer small text-muted"><i class="bi bi-clock me-1"></i>Hace 9 horas</div>
+                            <a href="#" class="stretched-link" aria-label="Leer: Sensores agua"></a>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- Tabla de noticias (estructura original mantenida) -->
-            <section class="mb-4" aria-labelledby="sec-tabla-dep">
-                <h2 class="section-title" id="sec-tabla-dep">Resumen de noticias deportivas</h2>
+            <!-- Tabla resumen -->
+            <section class="mb-4" aria-labelledby="sec-tabla-tec">
+                <h2 class="section-title" id="sec-tabla-tec">Resumen de noticias tecnológicas</h2>
                 <div class="card border-0 shadow-sm rounded-3 overflow-hidden">
                     <div class="card-body p-0">
                         <div class="table-responsive">
                             <table class="table table-hover mb-0">
-                                <caption class="px-3 py-2 text-muted small">Tabla resumen de noticias deportivas de la edición</caption>
+                                <caption class="px-3 py-2 text-muted small">Tabla resumen de noticias de tecnología e innovación</caption>
                                 <thead class="table-primary">
-                                    <tr>
-                                        <th>Título</th>
-                                        <th>Categoría</th>
-                                        <th>Resumen</th>
-                                    </tr>
+                                    <tr><th>Título</th><th>Categoría</th><th>Resumen</th></tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td class="fw-semibold">Selección local prueba nuevas variantes tácticas</td>
-                                        <td><span class="cat-badge badge-sport">Fútbol</span></td>
-                                        <td class="small text-muted">El cuerpo técnico convocó a jóvenes promesas para los próximos amistosos, buscando reforzar el recambio generacional del plantel.</td>
+                                        <td class="fw-semibold">Chile lidera adopción de IA en pymes de Latinoamérica</td>
+                                        <td><span class="cat-badge badge-tech">IA</span></td>
+                                        <td class="small text-muted">Más del 40% de las pymes chilenas ya integran herramientas de inteligencia artificial, duplicando el promedio regional.</td>
                                     </tr>
                                     <tr>
-                                        <td class="fw-semibold">Club universitario inaugura moderno centro de entrenamiento</td>
-                                        <td><span class="cat-badge badge-general">Infraestructura</span></td>
-                                        <td class="small text-muted">El nuevo complejo incluye gimnasio, áreas de recuperación y canchas de alto estándar para el primer equipo y divisiones menores.</td>
+                                        <td class="fw-semibold">Bootcamps de programación duplican matrícula en 2026</td>
+                                        <td><span class="cat-badge badge-general">Desarrollo</span></td>
+                                        <td class="small text-muted">La demanda por habilidades digitales impulsa el crecimiento de programas intensivos de formación tecnológica.</td>
                                     </tr>
                                     <tr>
-                                        <td class="fw-semibold">Atleta nacional obtiene récord en campeonato metropolitano</td>
-                                        <td><span class="cat-badge badge-society">Atletismo</span></td>
-                                        <td class="small text-muted">La deportista consiguió una nueva marca personal en la prueba de medio fondo, consolidándose como figura emergente del circuito local.</td>
+                                        <td class="fw-semibold">Sensores inteligentes optimizan el consumo de agua</td>
+                                        <td><span class="cat-badge badge-society">IoT</span></td>
+                                        <td class="small text-muted">El proyecto piloto de IoT redujo el desperdicio hídrico en un 22% en comunas del norte del país.</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -232,7 +207,7 @@
         </div>
     </main>
 
-    <!-- RQ-06: Footer ampliado -->
+    <!-- Footer ampliado (RQ-06) -->
     <footer class="site-footer text-white pt-5 pb-3 mt-4">
         <div class="container">
             <div class="row g-4">
@@ -251,8 +226,6 @@
                         <li><a href="negocios.html"><i class="bi bi-chevron-right me-1 small"></i>Negocios</a></li>
                         <li><a href="tecnologia.html"><i class="bi bi-chevron-right me-1 small"></i>Tecnología</a></li>
                         <li><a href="cultura.html"><i class="bi bi-chevron-right me-1 small"></i>Cultura</a></li>
-                        <li><a href="#"><i class="bi bi-chevron-right me-1 small"></i>Internacional</a></li>
-                        <li><a href="#"><i class="bi bi-chevron-right me-1 small"></i>Opinión</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-3 col-md-6">
@@ -263,7 +236,6 @@
                         <li><a href="#"><i class="bi bi-chevron-right me-1 small"></i>Términos de uso</a></li>
                         <li><a href="#"><i class="bi bi-chevron-right me-1 small"></i>Privacidad</a></li>
                         <li><a href="#"><i class="bi bi-chevron-right me-1 small"></i>Publicidad</a></li>
-                        <li><a href="#"><i class="bi bi-chevron-right me-1 small"></i>Contacto</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-3 col-md-6">
@@ -291,5 +263,4 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
