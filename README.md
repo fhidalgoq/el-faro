@@ -61,7 +61,7 @@ el-faro/
 
 Abre `index.html` directamente en un navegador o accede a la versión publicada en **GitHub Pages**:
 
-> 🔗 URL: _pendiente de publicación_
+> 🔗 URL: https://fhidalgoq.github.io/el-faro/
 
 ## 📚 Contexto académico
 
