@@ -27,7 +27,7 @@
 
                 <p class="text-muted mb-4">Regístrate gratis y accede a contenido exclusivo, boletines diarios y más beneficios para lectores de El Faro.</p>
 
-                <form method="POST" action="index.php?page=registro" novalidate>
+                <form method="POST" action="index.php?page=registro" class="form-ux">
 
                     <div class="mb-3">
                         <label for="nombre" class="form-label fw-semibold">Nombre completo <span class="text-danger">*</span></label>

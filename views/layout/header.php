@@ -5,6 +5,8 @@
  * Variable esperada: $paginaActiva (string) — p.ej: 'home', 'deporte', 'negocios', etc.
  */
 $paginaActiva = $paginaActiva ?? 'home';
+$usuarioLogeado = Auth::logeado();
+$nombreUsuario  = Auth::nombre();
 
 $navLinks = [
     'home'       => ['href' => 'index.php',                         'icon' => 'bi-house',    'label' => 'Inicio'],
@@ -57,9 +59,19 @@ $enDropdown = in_array($paginaActiva, array_keys($dropdownLinks));
             <div class="text-end d-none d-md-block">
                 <p class="mb-0 small opacity-75"><i class="bi bi-geo-alt-fill me-1"></i>Santiago de Chile</p>
                 <p class="mb-0 small opacity-75">
+                    <?php if ($usuarioLogeado): ?>
+                    <span class="user-badge me-2" title="Sesión activa">
+                        <i class="bi bi-person-circle me-1"></i><?= htmlspecialchars($nombreUsuario) ?>
+                    </span>
+                    <a href="index.php?page=logout" class="text-white-50 text-decoration-none me-2"
+                       title="Cerrar sesión">
+                        <i class="bi bi-box-arrow-right me-1"></i>Salir
+                    </a>
+                    <?php else: ?>
                     <a href="index.php?page=registro" class="text-white-50 text-decoration-none me-2">
                         <i class="bi bi-person-plus me-1"></i>Registrarse
                     </a>
+                    <?php endif; ?>
                     <a href="index.php?page=contacto" class="text-white-50 text-decoration-none">
                         <i class="bi bi-envelope me-1"></i>Contacto
                     </a>
@@ -113,11 +125,24 @@ $enDropdown = in_array($paginaActiva, array_keys($dropdownLinks));
                             <i class="bi bi-envelope me-1"></i>Contacto
                         </a>
                     </li>
+                    <?php if ($usuarioLogeado): ?>
+                    <li class="nav-item d-lg-none">
+                        <span class="nav-link user-nav-name">
+                            <i class="bi bi-person-circle me-1"></i><?= htmlspecialchars($nombreUsuario) ?>
+                        </span>
+                    </li>
+                    <li class="nav-item d-lg-none">
+                        <a class="nav-link" href="index.php?page=logout">
+                            <i class="bi bi-box-arrow-right me-1"></i>Cerrar sesión
+                        </a>
+                    </li>
+                    <?php else: ?>
                     <li class="nav-item d-lg-none">
                         <a class="nav-link <?= $paginaActiva === 'registro' ? 'active' : '' ?>" href="index.php?page=registro">
                             <i class="bi bi-person-plus me-1"></i>Registrarse
                         </a>
                     </li>
+                    <?php endif; ?>
                 </ul>
             </div>
         </div>

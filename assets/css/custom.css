@@ -243,3 +243,34 @@ body {
     box-shadow: 0 4px 14px rgba(13, 59, 102, 0.07);
 }
 video, audio { border-radius: 8px; }
+
+/* --- Sesión de usuario (mejora UX) --------------------------- */
+.user-badge {
+    display: inline-flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 999px;
+    padding: 0.2rem 0.75rem;
+    font-weight: 600;
+    color: #fff;
+}
+.user-nav-name {
+    color: var(--faro-accent) !important;
+    font-weight: 600;
+    cursor: default;
+}
+
+/* --- Validación visual en formularios (HTML5) -------------- */
+.form-ux .form-control:user-invalid,
+.form-ux .form-control.is-invalid {
+    border-color: #dc3545;
+    box-shadow: 0 0 0 0.15rem rgba(220, 53, 69, 0.15);
+}
+.form-ux .form-control:user-valid:not(:placeholder-shown) {
+    border-color: #198754;
+}
+.form-ux .form-control:focus {
+    border-color: var(--faro-secondary);
+    box-shadow: 0 0 0 0.2rem rgba(29, 111, 165, 0.2);
+}

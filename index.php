@@ -10,7 +10,15 @@ require_once 'controllers/ArticuloController.php';
 require_once 'controllers/ContactoController.php';
 require_once 'controllers/UsuarioController.php';
 
+Auth::iniciar();
+
 $page = htmlspecialchars(strip_tags($_GET['page'] ?? 'home'));
+
+if ($page === 'logout') {
+    Auth::salir();
+    header('Location: index.php');
+    exit;
+}
 
 $secciones  = ['home', 'deporte', 'negocios', 'tecnologia', 'cultura'];
 $articuloCtrl = new ArticuloController();

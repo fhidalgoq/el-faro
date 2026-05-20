@@ -5,13 +5,21 @@ require_once 'models/Contacto.php';
 class ContactoController {
 
     public function mostrar(): void {
+        $datos = [];
+        if (Auth::logeado()) {
+            $datos = [
+                'nombre' => Auth::nombre(),
+                'email'  => Auth::email(),
+            ];
+        }
+
         render('views/contacto/form.php', [
             'paginaActiva'  => 'contacto',
             'tituloPagina'  => 'Contacto',
             'metaDesc'      => 'Formulario de contacto del periódico digital El Faro.',
             'taglinePagina' => 'Estamos para escucharte.',
             'errores'       => [],
-            'datos'         => [],
+            'datos'         => $datos,
         ]);
     }
 
@@ -31,12 +39,24 @@ class ContactoController {
             return;
         }
 
-        $contacto = new Contacto(
-            htmlspecialchars(trim($datos['nombre'])),
-            htmlspecialchars(trim($datos['email'])),
-            htmlspecialchars(trim($datos['asunto'])),
-            htmlspecialchars(trim($datos['mensaje']))
-        );
+        $nombre  = htmlspecialchars(trim($datos['nombre']));
+        $email   = htmlspecialchars(trim($datos['email']));
+        $asunto  = htmlspecialchars(trim($datos['asunto']));
+        $mensaje = htmlspecialchars(trim($datos['mensaje']));
+
+        if (!Contacto::guardar($nombre, $email, $asunto, $mensaje)) {
+            render('views/contacto/form.php', [
+                'paginaActiva'  => 'contacto',
+                'tituloPagina'  => 'Contacto',
+                'metaDesc'      => 'Formulario de contacto del periódico digital El Faro.',
+                'taglinePagina' => 'Estamos para escucharte.',
+                'errores'       => ['No se pudo enviar el mensaje. Intente nuevamente.'],
+                'datos'         => $datos,
+            ]);
+            return;
+        }
+
+        $contacto = new Contacto($nombre, $email, $asunto, $mensaje);
 
         render('views/contacto/confirmacion.php', [
             'paginaActiva'  => 'contacto',

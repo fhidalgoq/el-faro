@@ -2,6 +2,7 @@
 /**
  * Helper compartido — El Faro
  */
+require_once __DIR__ . '/../models/Auth.php';
 
 // --- Badge por sección -------------------------------------------
 if (!function_exists('badgeClass')) {

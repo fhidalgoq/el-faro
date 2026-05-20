@@ -27,7 +27,14 @@
 
                 <p class="text-muted mb-4">¿Tienes alguna consulta, sugerencia o quieres contactar a nuestra redacción? Completa el formulario y te responderemos a la brevedad.</p>
 
-                <form method="POST" action="index.php?page=contacto" novalidate>
+                <?php if (Auth::logeado()): ?>
+                <div class="alert alert-info py-2" role="status">
+                    <i class="bi bi-person-check me-1"></i>
+                    Hemos completado tu nombre y correo porque tienes sesión iniciada.
+                </div>
+                <?php endif; ?>
+
+                <form method="POST" action="index.php?page=contacto" class="form-ux">
 
                     <div class="mb-3">
                         <label for="nombre" class="form-label fw-semibold">Nombre completo <span class="text-danger">*</span></label>
@@ -53,7 +60,9 @@
                     <div class="mb-4">
                         <label for="mensaje" class="form-label fw-semibold">Mensaje <span class="text-danger">*</span></label>
                         <textarea class="form-control" id="mensaje" name="mensaje" rows="5"
-                                  placeholder="Escribe tu mensaje aquí..." required><?= htmlspecialchars($datos['mensaje'] ?? '') ?></textarea>
+                                  placeholder="Escribe tu mensaje aquí..." required minlength="10"
+                                  maxlength="1000"><?= htmlspecialchars($datos['mensaje'] ?? '') ?></textarea>
+                        <div class="form-text">Mínimo 10 caracteres.</div>
                     </div>
 
                     <div class="d-grid">

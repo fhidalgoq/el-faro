@@ -1,9 +1,11 @@
 <?php
 
+require_once __DIR__ . '/Conexion.php';
+
 /**
  * Modelo: Contacto
  * Representa los datos del formulario de contacto de El Faro.
- * Arquitectura MVC — Capa Modelo
+ * Arquitectura MVC — Capa Modelo → Conexion (PDO) → MySQL
  */
 class Contacto {
     private string $nombre;
@@ -18,16 +20,19 @@ class Contacto {
         $this->mensaje = $mensaje;
     }
 
-    // Getters
     public function getNombre(): string  { return $this->nombre; }
     public function getEmail(): string   { return $this->email; }
     public function getAsunto(): string  { return $this->asunto; }
     public function getMensaje(): string { return $this->mensaje; }
 
-    /**
-     * Valida que todos los campos estén completos y el email sea válido.
-     * Retorna array de errores (vacío = sin errores).
-     */
+    public static function guardar(string $nombre, string $email, string $asunto, string $mensaje): bool {
+        $db = new Conexion();
+        return $db->ejecutar(
+            'INSERT INTO contactos (nombre, email, asunto, mensaje) VALUES (?, ?, ?, ?)',
+            [$nombre, $email, $asunto, $mensaje]
+        );
+    }
+
     public static function validarDatos(array $datos): array {
         $errores = [];
 

@@ -5,6 +5,11 @@ require_once 'models/Usuario.php';
 class UsuarioController {
 
     public function mostrar(): void {
+        if (Auth::logeado()) {
+            header('Location: index.php');
+            exit;
+        }
+
         render('views/usuario/registro.php', [
             'paginaActiva'  => 'registro',
             'tituloPagina'  => 'Crear cuenta',
@@ -31,12 +36,27 @@ class UsuarioController {
             return;
         }
 
-        $usuario = new Usuario(
-            1,
-            htmlspecialchars(trim($datos['nombre'])),
-            htmlspecialchars(trim($datos['email'])),
-            password_hash($datos['password'], PASSWORD_DEFAULT)
-        );
+        $nombre = htmlspecialchars(trim($datos['nombre']));
+        $email  = htmlspecialchars(trim($datos['email']));
+        $hash   = password_hash($datos['password'], PASSWORD_DEFAULT);
+
+        $id = Usuario::guardar($nombre, $email, $hash);
+
+        if ($id === null) {
+            render('views/usuario/registro.php', [
+                'paginaActiva'  => 'registro',
+                'tituloPagina'  => 'Crear cuenta',
+                'metaDesc'      => 'Regístrate en El Faro para recibir las noticias del día.',
+                'taglinePagina' => 'Únete a nuestra comunidad de lectores.',
+                'errores'       => ['No se pudo completar el registro. Intente nuevamente.'],
+                'datos'         => $datos,
+            ]);
+            return;
+        }
+
+        Auth::entrar($id, $nombre, $email);
+
+        $usuario = new Usuario($id, $nombre, $email, $hash);
 
         render('views/usuario/confirmacion.php', [
             'paginaActiva'  => 'registro',
